@@ -1,4 +1,47 @@
 :root{
+<<<<<<< HEAD
+    --primary-color: #222;
+    --secondary-color: #fff;
+    --text-color: #000;
+    --blue-color: #c0d6df;
+}
+
+*, body, html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+header{
+    background-color: var(--blue-color);
+}
+
+.header-custom{
+    padding-top: 5px;
+    margin: auto;
+}
+
+.btn-all{
+    width: 100%;
+    margin-top: 2px;
+}
+
+.input-text{
+    text-indent: 30px;
+    height: 30px;
+    margin-top: 2px;
+    border-radius: 10px;
+    border: 1px var(--primary-color) solid;
+}
+
+h2{
+    color: yellow;
+    font-weight: bold;
+}
+=======
     --sky-blue: #8ecae6ff;
     --blue-green: #219ebcff;
     --prussian-blue: #023047ff;
@@ -44,3 +87,4 @@ h1.h1-custom{
     margin: 2px auto;
     width: 95%;
 }
+>>>>>>> ee4d8b9f36ee48b8a7e0fd425b0f5eb584576b8c

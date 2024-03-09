@@ -4,31 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>nwe version</title>
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js">
     <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 
 <body>
     <header class="container-fluid">
-        <div class="container-fluid row">
-            <div class="col col-md-6 text-center text-md-start h1-div">
-                <h1 class="display-1 h1-custom">Movie</h1>
+        <div class="container row header-custom">
+
+            <div class="logo col-sm-12 col-md-6 text-center">
+                <h1>MyMovies</h1>
             </div>
 
-            <div class="col-12 col-md-6 row" id="search">
-                <div class="col-12 col-md-8">
-                    <input type="text" placeholder="Search" class="input-text">
-                </div>
-
-                <div class="col-12 col-md-4 row" id="search-2">
-                    <input type="number" placeholder="Year" class="col-md-8 input-text">
-                </div>
-                <button class="col-12 btn btn-primary btn-pesquisar">pesquisar</button>
+            <div class="col-sm-12 col-md-6 align-self-center">
+                <input type="text" class="nameMovie col-12 col-md-8 input-text btn-all" placeholder="Name Movie"
+                    id="nameMovie">
+                <input type="number" class="yaerMovie col-sm-12 col-md-4 input-text btn-all" placeholder="year"
+                    id="yearMovie">
+                <button class="addMovie btn btn-primary btn-all" id="search">search</button>
             </div>
+
+
         </div>
     </header>
+
+    <main class="container-fluid">
+        <div class="modal-erro d-none" id="error">
+
+            <button class="btn btn-danger" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                <span role="status">Verifique sua internet :( <br> redirecionando em: <p id="contador"></p></span>
+            </button>
+
+        </div>
+
+        <div class="text-center load d-none" id="load">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+         </div>
+
+        <div class="container modal-custom mt-2 d-none" id="modal">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <img src="https://1.bp.blogspot.com/-LA4B2wGW5AA/Tf5zLqiAmbI/AAAAAAAAB88/xYdfyFSqiEU/s1600/paisagem-de-lago-com-baloes-ao-fundo-imagens-imagem-de-fundo-wallpaper-para-pc-computador-tela-gratis-ambiente-de-trabalho.jpg"
+                        alt="" class="post img-fluid" id="post">
+                </div>
+
+                <div class="col-md-6">
+                    <h2 id="title">Title</h2>
+                    <p id="Description">Description</p>
+                    <p id="Year">Year</p>
+                    <br>
+                    <p id="Actors">Actors</p>
+                    <br>
+                    <p id="genre">genero</p><br>
+                    <p id="resume">resume</p>
+                </div>
+
+                <div class="m-3 col-12 row btn-modal">
+                    <button class="col-6 btn btn-success" id="adicionar">Adicionar</button>
+                    <button class="col-6 btn btn-danger" id="fechar">fechar</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script type="module" src="/modal.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="key.js"></script>
 </body>
 
 </html>

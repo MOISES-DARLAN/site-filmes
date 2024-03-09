@@ -1,1 +1,3 @@
-export var key =  "cb6cbd73"
+const key =  "cb6cbd73"
+
+export {key};
